@@ -16,7 +16,13 @@ get '/bologna' do
   'siamo arrita nel 2008 e partiti nel 2012'
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Fran", "Romeo", "Rita"].sample
+  erb :index
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb :index
 end

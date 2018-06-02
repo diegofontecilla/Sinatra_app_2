@@ -17,5 +17,6 @@ get '/bologna' do
 end
 
 get '/cat' do
+  @name = ["Fran", "Romeo", "Rita"].sample
   erb :index
 end
